@@ -1,0 +1,95 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    height: 100vh;
+    width: 100vw;
+    background-color: #d3d3d3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url('../img/background.jpg');
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.container{
+    width: 40%;
+    height: fit-content;
+    padding: 30px 20px;
+    border-radius: 5px;
+    display: grid;
+    grid-template-columns: 40% 40%;
+    justify-content: space-around;
+}
+.option{
+    height: 200px;
+    width: 100%;
+    background-color: #fff;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    border:10px;
+    box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    cursor: pointer;
+    position: relative;
+    color: #232b2b;
+    transition: 0.2s;
+}
+.option::before{
+    content: '';
+    height:100%;
+    width:100%;
+    position: absolute;
+    background-size: 85px;
+    background-repeat: no-repeat;
+    transform: translateX(-15%);
+    margin-top: 30px;
+}
+#option1::before{
+    background-image: url('../img/calculator.png');
+}
+#option2::before{
+    background-image: url('../img/theory.png');
+}
+.option::after{
+    content: "";
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif ;
+    white-space:pre;
+    position: absolute;
+    bottom: 12px;
+    transform: translateX(-50%);
+}
+#option1::after{
+    content: "Resultant \a Force";
+}
+#option2::after{
+    content: "Lami's \a Theorem";
+}
+@media screen and (max-width: 767px) {
+    .container{
+        width: 80%;
+        grid-template-columns: 80%;
+        grid-gap: 50px;
+        justify-content: center;
+    }
+    .option{
+        width: 200;
+        font-size: 1.3rem;
+    }
+    .option::before{
+        transform: translateX(-21%);
+    }
+}
+.option:hover{
+    transform: scale(1.1);
+    transition: 0.2s;
+}
+.option:active{
+    transform: scale(1);
+}

@@ -1,0 +1,204 @@
+body{
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif !important;
+    background-image: url('../img/background.jpg');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    width: 100vw;
+    overflow-x: hidden !important;
+}
+.card{
+    background-color: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    border:10px;
+    box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.1);
+}
+.container-fluid{
+    background-color: rgba(0, 0, 0, 0.2);
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    position: sticky;
+    top: 1px;
+    overflow-x: hidden !important;
+}
+.backbtn,.backbtn1{
+    position: absolute;
+    font-size: 1.1rem;
+    padding: 3px 10px 3px 8px;
+    font-weight: bolder;
+}
+.backbtn1{
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    z-index: 10;
+}
+.heading{
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    user-select: none;
+    margin: 0;
+    font-weight: bold;
+    color: rgb(23, 23, 23);
+}
+.input-group,.form-control{
+    font-family: 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-align: center;
+}
+.form-control,.btn{box-shadow: none !important;}
+.solution{
+    font-size: 1.1rem;
+}
+.desc{
+    font-size: 1.2rem;
+    margin-top: -10px;
+    margin-bottom: 20px;
+}
+.text-nowrap{
+    font-size: 0.8 rem;
+    margin-top: -10px;
+    margin-bottom: 20px;
+}
+#result{
+    opacity: 0;
+    transition: opacity linear 0.5s 0s;
+    max-height: 500px;
+    overflow: auto;
+    overflow-x: hidden;
+}
+#result.showResult{
+    opacity: 1;
+    transition: opacity linear 0.5s 0s;
+}
+#forces{
+    opacity: 0;
+    transition: opacity linear 0.5s 0s;
+    max-height: 300px;
+    overflow: auto;
+    overflow-x: hidden;
+}
+#forces.showForces{
+    opacity: 1;
+    transition: opacity linear 0.5s 0s;
+}
+::-webkit-scrollbar{width: 8px}
+::-webkit-scrollbar-track{box-shadow: inset 0 0 5px grey;border-radius: 3px}
+::-webkit-scrollbar-thumb{background: var(--light);border-radius: 3px}
+::-webkit-scrollbar-thumb:hover{background: var(--dark)}
+
+.axis-button, .quadrant-button{white-space: nowrap !important;}
+.quadrant-button{font-size: 0.8rem;}
+.axis-button.selected, .quadrant-button.selected {
+    background-color: #ccc;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button{
+    -webkit-appearance: none;
+}
+canvas {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 20px auto;
+}
+.latex-formula {
+    max-width: 100%;
+    display: inline-block;
+}
+
+#resultantCanvas {
+    background-color: #fff;
+    border-radius: 6px;
+}
+
+@media screen and (max-width: 360px) {
+    .quadrant-button{
+    font-size: 0.65rem !important;
+    padding: 4px 6px !important;
+    margin-top: 4px;
+    }
+}
+
+@media screen and (max-width: 325px) {
+    .force-label-input label {
+    font-size: 0.9rem !important;
+    }
+    .force-label-input input {
+    width: 100% !important;
+    margin-left: 5px !important;
+  }
+  .quadrant-button{
+    font-size: 0.65rem !important;
+    padding: 4px 6px !important;
+    margin-top: 4px;
+  }
+  .axis-button {
+    font-size: 0.75rem !important;
+    padding: 4px 6px !important;
+    margin-top: 4px;
+  }
+}
+
+@media screen and (max-width: 310px) {
+    .quadrant-button{
+    font-size: 0.6rem !important;
+    padding: 4px 6px !important;
+    margin-top: 4px;
+  }
+}
+
+@media screen and (max-width: 290px) {
+    .latex-formula {
+        font-size: 0.9rem;
+    }
+     .force-label-input label {
+    font-size: 0.8rem !important;
+    }
+    .force-label-input input {
+    width: 100% !important;
+    margin-left: 5px !important;
+  }
+    .quadrant-button{
+    font-size: 0.5rem !important;
+    padding: 4px 6px !important;
+    margin-top: 4px;
+  }
+  .axis-button {
+    font-size: 0.65rem !important;
+    padding: 4px 6px !important;
+    margin-top: 4px;
+  }
+}
+@media screen and (max-width: 273px ) {
+    .quadrant-button{
+    font-size: 0.45rem !important;
+    padding: 4px 6px !important;
+    margin-top: 4px;
+  }
+}
+@media screen and (max-width: 258px ) {
+     .latex-formula {
+        font-size: 0.8rem;
+    }
+}
+@media screen and (max-width: 768px) and (min-width: 576px) {
+  .axis-button {
+    margin-bottom: 10px !important; /* Add spacing below axis buttons */
+  }
+}
+@media screen and (max-width: 767px) {
+    .desc{
+        font-size: 1rem;
+    }
+    .heading{
+        font-size: 1.2rem;
+    }
+    #resultsntCanvas {
+        align-self: center;
+    }
+}
